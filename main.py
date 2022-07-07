@@ -1,8 +1,9 @@
+import time
 from turtle import Screen
 from player import Player
 from cars import Cars
-from friends import Friends
 from scoreboard import Scoreboard
+from thanks import Thanks
 
 # setup screen
 screen = Screen()
@@ -10,17 +11,17 @@ screen.bgcolor("white")
 screen.setup(width=700, height=400)
 screen.title("Turtle Crossing")
 
-# create turtle
-player = Player("turtle")
+# create player
+turtle_body = Player("turtle")
 
-# create enemy cars
+# create enemy cars (all colors) and friendly cars (black)
 cars = Cars()
 
-# create friendly Cars
-friends = Friends()
-
-# create scoreboard
+# create scoreboard to show player's score
 scoreboard = Scoreboard()
+
+# create thank you note
+thanks = Thanks()
 
 
 screen.exitonclick()
