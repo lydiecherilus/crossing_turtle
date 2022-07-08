@@ -6,4 +6,11 @@ class Player(Turtle):
         self.shape("turtle")
         self.penup()
         self.goto(0, -180)
-        self.right(270)
+        self.setheading(90)
+
+    def move_forward(self):
+        self.forward(10)
+
+    def move_backward(self):
+        self.backward(10)
+
