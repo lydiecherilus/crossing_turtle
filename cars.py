@@ -32,4 +32,12 @@ class Cars(Turtle):
             friend_car.goto(352, random.randint(-150, 150))
             friend_car.setheading(180)
             self.friendly_cars.append(friend_car)
+
+    def move_enemy_cars(self):
+        for car in self.enemy_cars:
+            car.forward(self.initial_speed)
+
+    def move_friendy_cars(self):
+         for car in self.friendly_cars:
+            car.forward(self.initial_speed)
     
