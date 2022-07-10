@@ -2,7 +2,7 @@ import random
 from turtle import Turtle
 
 class Cars(Turtle):
-    def __init__(self, shape):
+    def __init__(self):
         super(). __init__()
         self.hideturtle()
         self.initial_speed = 7

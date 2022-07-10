@@ -12,7 +12,7 @@ screen.setup(width=700, height=400)
 screen.title("Turtle Crossing")
 
 # create player
-turtle_body = Player("turtle")
+turtle_body = Player()
 
 # create enemy cars (all colors) and friendly cars (black)
 cars = Cars()
