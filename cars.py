@@ -41,3 +41,7 @@ class Cars(Turtle):
          for car in self.friendly_cars:
             car.forward(self.initial_speed)
     
+    def level_up(self):
+        self.initial_speed += 4
+        self.create_enemy_cars()
+        

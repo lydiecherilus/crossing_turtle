@@ -57,6 +57,13 @@ while isgame_on:
            
         elif car.distance(turtle_body) > 20:
             thanks.clear()
+            
+    # detect successful crossing
+    # if player crosses the road without getting hit, the game levels up and the speed increases 
+    if turtle_body.ycor() > 180:
+        turtle_body.goto(0, -180)
+        cars.level_up()
+        scoreboard.next_level()
 
 
 screen.exitonclick()
