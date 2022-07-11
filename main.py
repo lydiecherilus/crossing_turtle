@@ -42,5 +42,21 @@ while isgame_on:
     cars.create_friendly_cars()
     cars.move_friendy_cars()
 
+    # detect collision with enemy cars
+    # if player collides with enemy cars, the game is over
+    for car in cars.enemy_cars:
+        if car.distance(turtle_body) < 20:
+            isgame_on = False
+            scoreboard.game_over()
+            
+    # detect collision with friendy cars
+    # if player collides with friendly cars (black cars), player says thanks and the game continues
+    for car in cars.friendly_cars:
+        if car.distance(turtle_body) < 10:
+            thanks.thank_you()
+           
+        elif car.distance(turtle_body) > 20:
+            thanks.clear()
+
 
 screen.exitonclick()
